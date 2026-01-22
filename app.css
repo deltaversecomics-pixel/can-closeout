@@ -1,0 +1,216 @@
+:root { color-scheme: dark; }
+.root { min-height: 100vh; display: grid; place-items: center; padding: 16px; }
+
+.theme-dark { background: #050505; color: #eaeaea; }
+.theme-light { background: #f4f4f4; color: #111; }
+
+.device { width: min(420px, 92vw); }
+.bezel {
+  border-radius: 22px;
+  padding: 18px 16px 16px;
+  background: linear-gradient(180deg, #3a3a3a, #1f1f1f);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,255,255,0.08);
+}
+.device.l .bezel { background: linear-gradient(180deg, #ddd, #a9a9a9); color: #111; }
+
+.brand {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.screenWindow {
+  border-radius: 18px;
+  padding: 12px;
+  background: #0c0c0c;
+  border: 2px solid rgba(255,255,255,0.08);
+}
+.device.l .screenWindow { background: #dfe7d2; border-color: rgba(0,0,0,0.15); }
+
+.screenInner {
+  border-radius: 14px;
+  padding: 10px;
+  background: rgba(10,10,10,0.65);
+}
+.device.l .screenInner { background: rgba(255,255,255,0.45); }
+
+.fakeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  opacity: 0.7;
+}
+.pill {
+  width: 72px;
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.device.l .pill { background: rgba(255,255,255,0.65); border-color: rgba(0,0,0,0.12); }
+
+.topbar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.tab {
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.25);
+  color: inherit;
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.device.l .tab { border-color: rgba(0,0,0,0.16); background: rgba(255,255,255,0.35); }
+.tab.on { outline: 2px solid rgba(255,255,255,0.22); }
+
+.screenBlock { padding: 8px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); margin-bottom: 10px; }
+.device.l .screenBlock { border-color: rgba(0,0,0,0.12); }
+
+.readout label { font-size: 12px; opacity: 0.85; font-weight: 800; letter-spacing: 1px; }
+.lcd {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  margin-top: 6px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.device.l .lcd { background: rgba(255,255,255,0.45); border-color: rgba(0,0,0,0.14); }
+
+.row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.segBtn {
+  flex: 1;
+  min-width: 90px;
+  border-radius: 12px;
+  padding: 10px 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.18);
+  color: inherit;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.device.l .segBtn { border-color: rgba(0,0,0,0.18); background: rgba(255,255,255,0.35); }
+.segBtn.active { outline: 2px solid rgba(255,255,255,0.22); }
+
+.cardTotals { margin-top: 10px; display: grid; gap: 4px; font-size: 13px; opacity: 0.95; }
+
+.stats { margin-top: 10px; display: flex; justify-content: space-between; font-size: 13px; opacity: 0.95; }
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 10px 0;
+}
+.key {
+  border-radius: 14px;
+  padding: 14px 0;
+  font-weight: 900;
+  font-size: 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.18);
+  color: inherit;
+}
+.device.l .key { border-color: rgba(0,0,0,0.18); background: rgba(255,255,255,0.35); }
+.key.wide { grid-column: span 3; }
+
+.addRow { display: flex; gap: 10px; align-items: center; }
+.addRow.righty { justify-content: flex-end; }
+.addRow.lefty { justify-content: flex-start; }
+
+.addBtn {
+  border-radius: 16px;
+  padding: 14px 22px;
+  font-weight: 900;
+  font-size: 16px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+}
+.miniBtn {
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 900;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.18);
+  color: inherit;
+}
+.device.l .miniBtn { border-color: rgba(0,0,0,0.18); background: rgba(255,255,255,0.35); }
+
+.listBlock { margin-top: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); padding: 10px; }
+.device.l .listBlock { border-color: rgba(0,0,0,0.12); }
+.blockTitle { font-weight: 900; letter-spacing: 1px; font-size: 12px; opacity: 0.9; margin-bottom: 8px; }
+
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.listItem { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+.listTap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px 10px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.12);
+  color: inherit;
+}
+.device.l .listTap { border-color: rgba(0,0,0,0.14); background: rgba(255,255,255,0.28); }
+.tag { font-weight: 900; font-size: 12px; opacity: 0.9; }
+.amt { font-weight: 900; }
+.del {
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(180, 30, 30, 0.18);
+  color: inherit;
+}
+
+.muted { opacity: 0.75; font-size: 13px; }
+
+.closeInputs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 11px; font-weight: 900; letter-spacing: 1px; opacity: 0.9; }
+.field input, .field select {
+  border-radius: 12px;
+  padding: 10px 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.12);
+  color: inherit;
+  font-weight: 900;
+}
+.device.l .field input, .device.l .field select { border-color: rgba(0,0,0,0.18); background: rgba(255,255,255,0.35); }
+
+.sheet { width: 100%; border-collapse: collapse; font-size: 13px; }
+.sheet td { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.10); }
+.device.l .sheet td { border-bottom-color: rgba(0,0,0,0.10); }
+.k { opacity: 0.9; font-weight: 800; }
+.v { text-align: right; font-weight: 900; }
+
+.note { margin-top: 10px; font-size: 12px; opacity: 0.85; }
+
+.closeRow { display: flex; justify-content: flex-end; margin-top: 10px; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.modalCard {
+  width: min(380px, 92vw);
+  border-radius: 16px;
+  padding: 14px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+.modalTitle { font-weight: 900; letter-spacing: 1px; margin-bottom: 10px; }
+.modalRow { display: flex; justify-content: space-between; margin-top: 12px; gap: 10px; }
